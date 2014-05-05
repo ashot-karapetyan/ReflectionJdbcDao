@@ -1,3 +1,6 @@
+CREATE DATABASE [ReflectionJdbcTestDB];
+GO
+
 USE [ReflectionJdbcTestDB]
 GO
 
@@ -21,4 +24,5 @@ CREATE TABLE [dbo].[Projects](
 ) ON [PRIMARY]
 
 GO
+
 

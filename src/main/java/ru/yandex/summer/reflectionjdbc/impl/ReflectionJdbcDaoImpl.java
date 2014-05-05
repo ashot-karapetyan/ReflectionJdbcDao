@@ -26,6 +26,9 @@ import java.util.Date;
 
 /**
  * Implementation of ReflectionJdbcDao.
+ * <br/>
+ * <b>NOTE: Supports only beans which fields are only Java types.</b>
+ * @param <T> the type of objects for which this DAO is used.
  */
 public class ReflectionJdbcDaoImpl<T>
         implements ReflectionJdbcDao<T> {
