@@ -13,6 +13,10 @@ public class ReflectionJdbcSQLException extends RuntimeException {
 		super(message);
 	}
 
+    public ReflectionJdbcSQLException(Throwable throwable) {
+        super(throwable);
+    }
+
 
 	public ReflectionJdbcSQLException(String message, Throwable cause) {
 		super(message, cause);

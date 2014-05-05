@@ -13,125 +13,123 @@ import java.util.Date;
 @MappedTable(table = "Projects")
 public class TestBean {
 
-	@KeyColumn
-	@Column(mappedColumn = "id")
-	private Integer id;
+    @KeyColumn
+    @Column(mappedColumn = "id")
+    private Integer id;
 
-//	@KeyColumn
-	@Column(mappedColumn = "name")
-	private String name;
+    //	@KeyColumn
+    @Column(mappedColumn = "name")
+    private String name;
 
-	@Column(mappedColumn = "amount")
-	private Double amount;
+    @Column(mappedColumn = "amount")
+    private Double amount;
 
-	@Column(mappedColumn = "date")
-	private Date date;
+    @Column(mappedColumn = "date")
+    private Date date;
 
-	@Column(mappedColumn = "flag")
-	private boolean flag;
+    @Column(mappedColumn = "flag")
+    private boolean flag;
 
-	@AllowNull
-	@Column(mappedColumn = "description")
-	private String description;
+    @AllowNull
+    @Column(mappedColumn = "description")
+    private String description;
 
-	public TestBean(Integer id,String name) {
-		this.id = id;
-		this.name = name;
-	}
-	public TestBean(Integer id) {
-		this.id = id;
-	}
+    public TestBean(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
-	public TestBean() {
+    public TestBean(Integer id) {
+        this.id = id;
+    }
 
-	}
+    public TestBean() {
 
-	public TestBean(Integer id, String name, Date date, boolean flag, Double amount) {
-		this.id = id;
-		this.name = name;
-		this.date = date;
-		this.flag = flag;
-		this.amount = amount;
-	}
+    }
 
-
-	public Integer getId() {
-
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public Double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(Double amount) {
-		this.amount = amount;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public boolean isFlag() {
-		return flag;
-	}
-
-	public void setFlag(boolean flag) {
-		this.flag = flag;
-	}
+    public TestBean(Integer id, String name, Date date, boolean flag, Double amount) {
+        this.id = id;
+        this.name = name;
+        this.date = date;
+        this.flag = flag;
+        this.amount = amount;
+    }
 
 
+    public Integer getId() {
 
-	public String getName() {
-		return name;
-	}
+        return id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public Double getAmount() {
+        return amount;
+    }
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (!(o instanceof TestBean)) return false;
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
 
-		TestBean testBean = (TestBean) o;
+    public Date getDate() {
+        return date;
+    }
 
-		if (flag != testBean.flag) return false;
-		if (!amount.equals(testBean.amount)) return false;
-		if (!date.equals(testBean.date)) return false;
-		if (!id.equals(testBean.id)) return false;
-		if (!name.equals(testBean.name)) return false;
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
-		return true;
-	}
+    public boolean isFlag() {
+        return flag;
+    }
 
-	@Override
-	public int hashCode() {
-		int result = id.hashCode();
-		result = 31 * result + name.hashCode();
-		result = 31 * result + amount.hashCode();
-		result = 31 * result + date.hashCode();
-		result = 31 * result + (flag ? 1 : 0);
-		return result;
-	}
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
 
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TestBean)) return false;
+
+        TestBean testBean = (TestBean) o;
+
+        if (flag != testBean.flag) return false;
+        if (!amount.equals(testBean.amount)) return false;
+        if (!id.equals(testBean.id)) return false;
+        if (!name.equals(testBean.name)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + name.hashCode();
+        result = 31 * result + amount.hashCode();
+        result = 31 * result + (flag ? 1 : 0);
+        return result;
+    }
+
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
 
 }

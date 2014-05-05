@@ -5,11 +5,8 @@ import ru.yandex.summer.reflectionjdbc.api.db.DBType;
 
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
-import java.sql.SQLException;
-import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
-import static org.junit.Assert.*;
 /**
  * Created by ashot.karapetyan on 5/2/14.
  */
@@ -26,11 +23,11 @@ public class IntegrationTestBase {
 
 	public IntegrationTestBase() {
 		this.dbType = DBType.MSSQL;
-		this.userName = "idmdevuser";
-		this.password = "idmdevuser";
-		this.dbHost = "sis2s034";
-		this.dbName = "tst_IDM-Kb-Mexico-Prod_20140502";
-	}
+        this.userName = "sa";
+        this.password = "sa";
+        this.dbHost = "localhost";
+        this.dbName = "ReflectionJdbcTestDB";
+    }
 
 	public IntegrationTestBase(DBType dbType, String userName, String password, String dbHost, String dbName) {
 		this.dbType = dbType;

@@ -74,5 +74,5 @@
 			<version>5.1.30</version>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+    </dependencies>
 </project>
