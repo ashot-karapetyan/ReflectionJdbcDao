@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+<query id="insert">
+		<description>insert</description>
+		<dialects>
+		  <language name="mssql">
+			    <![CDATA[
+			        INSERT INTO @@tableName (@@columns)
+			        VALUES (@@values)
+				]]>
+		  </language>
+		</dialects>
+	</query>
+	<query id="update">
+		<description>update row</description>
+		<dialects>
+			<language name="mssql">
+	            <![CDATA[
+					Update @@tableName
+					SET @@values
+					WHERE (@@condition)
+				]]>
+	        </language>
+		</dialects>
+	</query>
+	<query id="delete">
+		<description>delete</description>
+		<dialects>
+			<language name="mssql">
+			    <![CDATA[
+					DELETE FROM @@tableName
+					WHERE (@@condition)
+				]]>
+	        </language>
+		</dialects>
+	</query>
+	<query id="selectOne">
+		<description>select one row</description>
+		<dialects>
+			<language name="mssql">
+			    <![CDATA[
+					SELECT *
+					FROM @@tableName
+					WHERE (@@condition)
+				]]>
+	        </language>
+		</dialects>
+	</query>
+	<query id="selectAll">
+		<description>select one row</description>
+		<dialects>
+			<language name="mssql">
+			    <![CDATA[
+					SELECT *
+					FROM @@tableName
+				]]>
+	        </language>
+		</dialects>
+	</query>
+  </queries>

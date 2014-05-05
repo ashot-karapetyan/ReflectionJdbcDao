@@ -13,5 +13,5 @@ public interface ReflectionJdbcDao<T> {
 
     public T selectByKey(T key);
 
-    public List<T> selectAll();
+    public List<T> selectAll(Class<T> type);
 }

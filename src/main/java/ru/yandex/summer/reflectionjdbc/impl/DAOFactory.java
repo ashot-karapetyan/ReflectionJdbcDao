@@ -1,6 +1,7 @@
 package ru.yandex.summer.reflectionjdbc.impl;
 
 import ru.yandex.summer.reflectionjdbc.api.dao.ReflectionJdbcDao;
+import ru.yandex.summer.reflectionjdbc.api.db.DBType;
 
 import javax.sql.DataSource;
 
@@ -12,20 +13,30 @@ public class DAOFactory {
     public static DAOFactory factory;
 
     private DataSource dataSource;
+	private DBType dBType;
 
-    private DAOFactory(DataSource dataSource){
+	private DAOFactory(DataSource dataSource, DBType dBType){
         this.dataSource = dataSource;
+		this.dBType = dBType;
     }
 
-    public static void createFactory(DataSource dataSource){
-        factory = new DAOFactory(dataSource);
+    public static void createFactory(DataSource dataSource, DBType dBType){
+        factory = new DAOFactory(dataSource, dBType);
     }
 
-    public <T> ReflectionJdbcDao<T> getReflectionJdbcDao(){
-        return new ReflectionJdbcDaoImpl<T>();
+	public static DAOFactory getInstance() {
+		return factory;
+	}
+
+	public  DBType getDBType() {
+		return this.dBType;
+	}
+
+	public <T> ReflectionJdbcDao<T> getReflectionJdbcDao(){
+        return new ReflectionJdbcDaoImpl2<T>();
     }
 
     public DataSource getDataSource() {
-        return dataSource;
+        return this.dataSource;
     }
 }

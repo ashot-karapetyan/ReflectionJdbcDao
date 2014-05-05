@@ -6,10 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * For one-to-many and many-to-many relationship
+ * Mark field with column.
+ * Indicates that mapped column is part of table key.
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ConnectionTable {
-    String table();
+public @interface KeyColumn {
 }

@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by Ashot on 4/28/2014.
+ * Maps bean with DB table.
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

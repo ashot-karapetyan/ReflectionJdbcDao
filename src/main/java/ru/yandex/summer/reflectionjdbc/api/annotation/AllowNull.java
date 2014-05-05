@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by Ashot on 4/28/2014.
+ * {@code null} value is permitted for marked field.
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
